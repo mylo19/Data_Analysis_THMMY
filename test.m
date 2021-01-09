@@ -7,5 +7,6 @@ P4 = fitdist(cases', 'rayleigh');
 P5 = fitdist(cases', 'lognormal');
 
 x = -100:10000;
+z = 0;
 y = pdf(P4,x);
 plot(x,y)
