@@ -22,7 +22,7 @@ y4 = pdf(P4,days);
 y5 = pdf(P5,days);
 
 
-%Kolmogorov-Smirnov test with our tyxaia metavliti and the generated
+%Kolmogorov-Smirnov test with our random variable and the generated
 %vector. The p-values are all too small to compare.
 [H1,P1] = kstest2(y1,normalised_deaths);
 [H2,P2] = kstest2(y2,normalised_deaths);

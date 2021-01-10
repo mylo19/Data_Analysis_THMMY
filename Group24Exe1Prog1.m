@@ -22,7 +22,7 @@ y4 = pdf(P4,days);
 y5 = pdf(P5,days);
 
 
-%Kolmogorov-Smirnov test with our tyxaia metavliti and the generated
+%Kolmogorov-Smirnov test with our random variable and the generated
 %vector. The p-values are all too small to compare.
 [H1,P1] = kstest2(y1,normalised_cases);
 [H2,P2] = kstest2(y2,normalised_cases);
@@ -41,7 +41,6 @@ for i = 1:length(days)
     diff5 = diff5 + (normalised_cases(i)-y5(i))^2;
 end
 
-difeerencies = [diff1,diff2,diff3,diff4,diff5];
 minimum = min([diff1,diff2,diff3,diff4,diff5]);
 switch minimum
     case diff1
