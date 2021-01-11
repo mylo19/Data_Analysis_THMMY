@@ -40,6 +40,11 @@ for i = 1:length(days)
     diff4 = diff4 + abs(normalised_deaths(i)^2-y4(i)^2);
     diff5 = diff5 + abs(normalised_deaths(i)^2-y5(i)^2);
 end
+diff1 = diff1/length(days);
+diff2 = diff2/length(days);
+diff3 = diff3/length(days);
+diff5 = diff4/length(days);
+diff5 = diff5/length(days);
 
 difeerencies = [diff1,diff2,diff3,diff4,diff5];
 minimum = min([diff1,diff2,diff3,diff4,diff5]);

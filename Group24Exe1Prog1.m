@@ -40,6 +40,11 @@ for i = 1:length(days)
     diff4 = diff4 + (normalised_cases(i)-y4(i))^2;
     diff5 = diff5 + (normalised_cases(i)-y5(i))^2;
 end
+diff1 = diff1/length(days);
+diff2 = diff2/length(days);
+diff3 = diff3/length(days);
+diff5 = diff4/length(days);
+diff5 = diff5/length(days);
 
 minimum = min([diff1,diff2,diff3,diff4,diff5]);
 switch minimum
