@@ -48,5 +48,4 @@ ci = bootci(1000,@mean,days_dif);
 %much sense statistically, but if we examine from our perspective, is
 %actually expected. COVID-19 was a new desease during the 1st wave with a
 %much higher death rate, as you can see here, in the last part: Outcome https://www.worldometers.info/coronavirus/coronavirus-cases/?fbclid=IwAR3y740mnBvcLrRkLttnNIGnJ8AsBAdNpUPE8zYp_QmuUA3G5oFqXbpZzOs#case-outcome
-%Since then, we may have more active cases, but fewer deaths, hence those
-%intervals.
+%Since then, we may have more active cases
