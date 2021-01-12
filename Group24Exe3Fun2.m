@@ -1,4 +1,4 @@
-function [] = Group24Exe2Fun1(normalised_sample, country_name,action)
+function [day_max] = Group24Exe3Fun2(normalised_sample)
     days = 1:length(normalised_sample);
 
     %Create 5 objects  with 5 different distributions
@@ -33,16 +33,15 @@ function [] = Group24Exe2Fun1(normalised_sample, country_name,action)
     minimum = min([diff1,diff2,diff3,diff4,diff5]);
     switch minimum 
         case diff1
-            fprintf('The fitting distribution for %s - %s is Normal\n', country_name,action)
+            day_max = Group24Exe3Fun1(y1);
         case diff2
-            fprintf('The fitting distribution for %s - %s is Half Normal\n', country_name,action)
+            day_max = Group24Exe3Fun1(y2);
         case diff3
-            fprintf('The fitting distribution for %s - %s is Poisson\n', country_name,action)
+            day_max = Group24Exe3Fun1(y3);
         case diff4 
-            fprintf('The fitting distribution for %s - %s is Rayleigh\n', country_name,action)
+            day_max = Group24Exe3Fun1(y4);
         case diff5
-            fprintf('The fitting distribution for %s - %s is lognormal\n', country_name,action)
+            day_max = Group24Exe3Fun1(y5);
     end
 
 end
-

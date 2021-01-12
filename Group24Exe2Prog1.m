@@ -5,7 +5,7 @@ c = 'Confirmed Cases';
 d = 'Confirmed Deaths';
 
 Countries = ["Austria", "Belgium", "Denmark","France", "Germany","Greece",...
-    "Ireland","Italy","Russia","Sweeden"];
+    "Ireland","Italy","Russia","Sweden"];
 
 Group24Exe1Prog3
 
@@ -36,5 +36,5 @@ Group24Exe2Fun1(normalised_deaths_italy,Countries(8),d)
 Group24Exe2Fun1(normalised_cases_russia,Countries(9),c)
 Group24Exe2Fun1(normalised_deaths_russia,Countries(9),d)
 
-Group24Exe2Fun1(normalised_cases_sweeden,Countries(10),c)
-Group24Exe2Fun1(normalised_deaths_sweeden,Countries(10),d)
+Group24Exe2Fun1(normalised_cases_sweden,Countries(10),c)
+Group24Exe2Fun1(normalised_deaths_sweden,Countries(10),d)

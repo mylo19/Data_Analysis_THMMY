@@ -1,0 +1,6 @@
+days_min = zeros(1,10);
+days_max = zeros(1,10);
+days_dif = zeros(1,10);
+
+Group24Exe1Prog3
+

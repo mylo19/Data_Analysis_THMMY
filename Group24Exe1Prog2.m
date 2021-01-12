@@ -12,7 +12,7 @@ P3 = fitdist(days', 'poisson');
 P4 = fitdist(days', 'rayleigh');
 P5 = fitdist(days', 'lognormal');
 
-%Create vectors with numbers generated with the according distribution of
+%Create vectors with numbers generated with the equivalent distribution of
 %each object. The size is the same with our sample
 y1 = pdf(P1,days);
 y2 = pdf(P2,days);
