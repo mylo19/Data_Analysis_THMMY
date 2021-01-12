@@ -1,5 +1,5 @@
-function [] = Group24Exe2Fun1(normalised_cases, country_name,action)
-    days = 1:length(normalised_cases);
+function [] = Group24Exe2Fun1(normalised_sample, country_name,action)
+    days = 1:length(normalised_sample);
 
     %Create 5 objects  with 5 different distributions
     P1 = fitdist(days', 'normal');
@@ -18,32 +18,30 @@ function [] = Group24Exe2Fun1(normalised_cases, country_name,action)
     
     diff1 = 0; diff2 = 0; diff3 = 0; diff4 = 0; diff5 = 0;
     for i = 1:length(days)
-        diff1 = diff1 + (normalised_cases(i)-y1(i)^2);
-        diff2 = diff2 + (normalised_cases(i)-y2(i))^2;
-        diff3 = diff3 + (normalised_cases(i)-y3(i))^2;
-        diff4 = diff4 + (normalised_cases(i)-y4(i))^2;
-        diff5 = diff5 + (normalised_cases(i)-y5(i))^2;
+        diff1 = diff1 + (normalised_sample(i)-y1(i)^2);
+        diff2 = diff2 + (normalised_sample(i)-y2(i))^2;
+        diff3 = diff3 + (normalised_sample(i)-y3(i))^2;
+        diff4 = diff4 + (normalised_sample(i)-y4(i))^2;
+        diff5 = diff5 + (normalised_sample(i)-y5(i))^2;
     end
     diff1 = diff1/length(days);
     diff2 = diff2/length(days);
     diff3 = diff3/length(days);
-    diff5 = diff4/length(days);
+    diff4 = diff4/length(days);
     diff5 = diff5/length(days);
     
     minimum = min([diff1,diff2,diff3,diff4,diff5]);
-    switch minimum %check how to print in with a string, it doesn't work, 
-        %the goal is to print: The fiiting distribution for Austria - Cases
-        %is Normal
+    switch minimum 
         case diff1
-            disp('The fitting distribution for ', country_name,'-',action, 'is Normal')
+            fprintf('The fitting distribution for %s - %s is Normal\n', country_name,action)
         case diff2
-            disp('The fitting distribution for ', country_name,'-',action, 'Half Normal')
+            fprintf('The fitting distribution for %s - %s is Half Normal\n', country_name,action)
         case diff3
-            disp('The fitting distribution for ', country_name,'-',action, 'Poisson')
+            fprintf('The fitting distribution for %s - %s is Poisson\n', country_name,action)
         case diff4 
-            disp('The fitting distribution for ', country_name,'-',action, 'Rayleigh')
+            fprintf('The fitting distribution for %s - %s is Rayleigh\n', country_name,action)
         case diff5
-            disp('The fitting distribution for ', country_name,'-',action, 'lognormal')
+            fprintf('The fitting distribution for %s - %s is lognormal\n', country_name,action)
     end
 
 end
