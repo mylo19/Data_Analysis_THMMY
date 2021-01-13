@@ -1,4 +1,5 @@
-%Executive for confirmed cases. Our country is United Kingdom. The wave is defined in the txt file.
+%Executive for confirmed cases. Our country is United Kingdom. The wave is
+%defined in the Group24Exe1Prog3.m file
 %Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
 

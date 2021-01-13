@@ -1,4 +1,4 @@
-%Executive for confirmed deaths. Our country is United Kingdom. The wave is defined in the txt file.
+%Executive for confirmed deaths. Our country is United Kingdom. 
 %Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
 
