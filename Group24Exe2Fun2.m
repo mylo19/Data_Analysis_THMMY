@@ -1,3 +1,8 @@
+%Efstathios Dimitriadis 8490
+%Emmanouil Mylonas 9508
+%This function compares the UK's fitting distribution for the sample of the
+%other countries and returns the difference, using LSE.
+
 function [diff] = Group24Exe2Fun2(data, distr)
     days = 1:length(data);
     P = fitdist(days', distr);

@@ -1,3 +1,10 @@
+%Efstathios Dimitriadis 8490
+%Emmanouil Mylonas 9508
+%This function takes as input the cases/deaths of a country and matches
+%them to the best fitting distribution among these five, using the Least
+%Square Error. We tried to use Kolmogorov-Smirnov test, but the p-values
+%are too small to be taken into consideration.
+
 function [distribution] = Group24Exe1Fun1(normalised_cases_uk)
     days = 1:length(normalised_cases_uk);
     %Create 5 objects  with 5 different distributions

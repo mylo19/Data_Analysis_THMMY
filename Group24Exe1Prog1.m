@@ -6,3 +6,6 @@
 Group24Exe1Prog3
 distribution = Group24Exe1Fun1(normalised_cases_uk);
 disp(['The fitting distribution is ', distribution])
+
+%Using the Least Square Error we conclude that the fitting distribution
+%for UK is Rayleigh.

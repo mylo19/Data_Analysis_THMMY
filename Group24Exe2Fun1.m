@@ -1,3 +1,9 @@
+%Efstathios Dimitriadis 8490
+%Emmanouil Mylonas 9508
+%This function is not used in the Program. We created it as a side test, to
+%find the fitting distribution for each country's cases/deaths and helped
+%us to confirm our results.
+
 function [] = Group24Exe2Fun1(normalised_sample, country_name,action)
     days = 1:length(normalised_sample);
 
