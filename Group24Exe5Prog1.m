@@ -68,7 +68,6 @@ fprintf('The best model for Austria is y = (%f) * x + (%f)\n',b(2,i+1),b(1,i+1))
 
 %% Belgium
 
-
 adjR2 = zeros(21,1);
 e_standard = zeros(length(normalised_cases_belgium),21);
 y = zeros(length(normalised_cases_belgium),21);
@@ -106,7 +105,7 @@ e_standard = zeros(length(normalised_cases_france),21);
 y = zeros(length(normalised_cases_france),21);
 b = zeros(2,21);
 for t=0:20
-    deaths_sample = total_deaths_fr(58+t:150+t)/sum(total_deaths_uk(58+t:150+t));
+    deaths_sample = total_deaths_fr(58+t:150+t)/sum(total_deaths_fr(58+t:150+t));
     cases_sample = [ones(size(normalised_cases_france')) normalised_cases_france'];
     b(:,t+1) = regress(deaths_sample', cases_sample);
     n = length(deaths_sample);
@@ -166,7 +165,7 @@ e_standard = zeros(length(normalised_cases_ireland),21);
 y = zeros(length(normalised_cases_ireland),21);
 b = zeros(2,21);
 for t=0:20
-    deaths_sample = total_deaths_ir(59+t:184+t)/sum(total_deaths_gr(59+t:184+t));
+    deaths_sample = total_deaths_ir(59+t:184+t)/sum(total_deaths_ir(59+t:184+t));
     cases_sample = [ones(size(normalised_cases_ireland')) normalised_cases_ireland'];
     b(:,t+1) = regress(deaths_sample', cases_sample);
     n = length(deaths_sample);
