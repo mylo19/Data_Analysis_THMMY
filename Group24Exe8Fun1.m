@@ -1,8 +1,8 @@
 %Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
-%OLS using SVD algorithm.
+%PCR using SVD algorithm.
 
-function [bOLS] = Group24Exe8Fun1(total_cases,total_deaths,start_date,end_date)
+function [bPCR] = Group24Exe8Fun1(total_cases,total_deaths,start_date,end_date)
     deaths_sample = total_deaths(start_date:end_date)/sum(total_deaths(start_date:end_date));
     n = length(deaths_sample);
     cases_sample = zeros(n,21);
@@ -11,10 +11,18 @@ function [bOLS] = Group24Exe8Fun1(total_cases,total_deaths,start_date,end_date)
         cases_sample(:,t+1) = cases_sample(:,t+1)/sum(cases_sample(:,t+1));
     end
     
-    % OLS
-    m = mean(cases_sample);
-    cases_sample_centered = cases_sample - repmat(m,n,1);
+    % PCR
+    mC = mean(cases_sample);
+    mD = mean(deaths_sample);
+    cases_sample_centered = cases_sample - repmat(mC,n,1);
+    deaths_sample_centered = deaths_sample' - repmat(mD,n,1);
     
     [U,Sigma,V] = svd(cases_sample_centered,'econ');
-    bOLS = V*Sigma\U'*deaths_sample';    
+    lamda = zeros(21,1);
+    lamda(1:5) = 1;
+    bPCR = V * diag(lamda)*inv(Sigma)*U'*deaths_sample_centered;
+    %bPCRV = vM * diag(lambdaV) * inv(sigmaM) * uM'* ycV;
+    b0 = mD - mC*bPCR;
+    bPCR = [b0 ;bPCR];
+    
 end
