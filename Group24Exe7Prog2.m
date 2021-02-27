@@ -9,7 +9,7 @@ close all
 
 %% UK
 name = 'UK';
-Group24Exe7Fun1(model_UK, total_cases_uk, total_deaths_uk, start_cases_second_uk, end_cases_second_uk, name);
+Group24Exe7Fun1(model_UK, total_cases_uk, total_deaths_uk, start_second_uk, end_second_uk, name);
 
 %% Austria
 name = 'Austria';
