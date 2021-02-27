@@ -28,6 +28,8 @@ normalised_second_cases_be = second_cases_be/sum(second_cases_be);
 
 second_deaths_be = total_deaths_bel(270:347);
 normalised_second_deaths_be = second_deaths_be/sum(second_deaths_be);
+start_second_be = 250;
+end_second_be = 347;
 
 %% Denmark
 second_cases_de = total_cases_den(220:348);
@@ -35,8 +37,6 @@ normalised_second_cases_de = second_cases_de/sum(second_cases_de);
 
 second_deaths_de = total_deaths_den(254:348);
 normalised_second_deaths_de = second_deaths_de/sum(second_deaths_de);
-start_second_be = 250;
-end_second_be = 347;
 
 %% France
 second_cases_fr = total_cases_fr(209:348);
@@ -69,6 +69,8 @@ normalised_second_cases_ir = second_cases_ir/sum(second_cases_ir);
 
 second_deaths_ir = total_deaths_ir(250:346);
 normalised_second_deaths_ir = second_deaths_ir/sum(second_deaths_ir);
+start_second_ir = 200;
+end_second_ir = 346;
 
 %% Italy
 second_cases_it = total_cases_it(230:348);
@@ -97,5 +99,3 @@ normalised_normalised_cases_swit = second_cases_swit/sum(second_cases_swit);
 
 second_deaths_swit = total_deaths_swit(300:346);
 normalised_second_deaths_swit = second_deaths_swit/sum(second_deaths_swit);
-start_second_ir = 200;
-end_second_ir = 346;

@@ -6,9 +6,9 @@ function adjR2 = Group24Exe7Fun1(model, total_cases, total_deaths, start_cases, 
 %the adjusted coefficient of determination
     adjRsq = @(ypred,y,n,k) ( 1 - (n-1)/(n-1-k)*sum((ypred-y).^2)/sum((y-mean(y)).^2) );
 
-    % Για να αντιμετωπίσουμε τις διαφορές στα πεδία ορισμού μεταξύ πρώτου
-    % και δεύτερου κύματος σε ορισμένες χώρες, κανονικοποιούμε τα δεδομένα
-    % όπως είχαμε κάνει και στο πρώτο κύμα.
+    % To deal with the different domains between the first and second waves
+    % for some countries we normalise the datasets for cases and deaths
+    % like we did for the first wave.
     deaths_sample = total_deaths(start_cases:end_cases)/sum(total_deaths(start_cases:end_cases));
     n = length(deaths_sample);
     cases_sample = zeros(n,21);

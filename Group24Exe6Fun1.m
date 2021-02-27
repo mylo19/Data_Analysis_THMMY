@@ -23,12 +23,12 @@ function [model, b, b2] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
     rmse_step = errors/rms_step;
     adjR2_step = adjRsq(Ypred,deaths_sample',n,length(b));
 
-%     figure()
-%     scatter(Ypred,rmse_step)
-%     hold on
-%     plot(xlim,-1.96*[1 1],'--c');
-%     plot(xlim,1.96*[1 1],'--c');
-%     title('Diagnostic plot - Stepwise Regression - UK');
+    figure()
+    scatter(Ypred,rmse_step)
+    hold on
+    plot(xlim,-1.96*[1 1],'--c')
+    plot(xlim,1.96*[1 1],'--c')
+    title('Diagnostic plot - Stepwise Regression - UK');
 
     %Full 21 Model
     regressionModel = fitlm(cases_sample,deaths_sample');
@@ -41,11 +41,11 @@ function [model, b, b2] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
     rmse_full = errors/rms_full;
     adjR2_full = adjRsq(ypred,deaths_sample',n,length(b2));
 
-%     figure()
-%     scatter(ypred,rmse_full)
-%     hold on
-%     plot(xlim,-1.96*[1 1],'--c');
-%     plot(xlim,1.96*[1 1],'--c');
+    figure()
+    scatter(ypred,rmse_full)
+    hold on
+    plot(xlim,-1.96*[1 1],'--c')
+    plot(xlim,1.96*[1 1],'--c')
     %This doesn't work, I dont know why there is a problem with title.
     %title(sprintf('Diagnostic plot - Full Model - %s', name));
 
