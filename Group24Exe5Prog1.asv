@@ -9,7 +9,6 @@ adjR2 = zeros(21,1);
 rmse = zeros(length(normalised_cases_uk),21);
 y = zeros(length(normalised_cases_uk),21);
 b = zeros(2,21);
-adjR2_simple = zeros(6,1);
 
 for t=0:20
     deaths_sample = total_deaths_uk(50+t:210+t)/sum(total_deaths_uk(50+t:210+t)); 
@@ -28,12 +27,12 @@ scatter(y(:,i),rmse(:,i+1))
 hold on
 plot(xlim,-1.96*[1 1],'--c')
 plot(xlim,1.96*[1 1],'--c')
-title('Simple Regression - Diagnostic Plot for UK')
+title('Diagnostic Plot for UK')
 
-fprintf('Simple Regression - The best delay for UK is %.0f days\n',i-1);
-fprintf('Simple Regression - The best model for UK is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
+fprintf('The best delay for UK is %.0f days\n',i-1);
+fprintf('The best model for UK is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
-adjR2_simple(1) = adjR2(i);
+
 %% Austria
 
 adjR2 = zeros(21,1);
@@ -57,12 +56,12 @@ scatter(y(:,i),rmse(:,i+1))
 hold on
 plot(xlim,-1.96*[1 1],'--c')
 plot(xlim,1.96*[1 1],'--c')
-title('Simple Regression - Diagnostic Plot for Austria')
+title('Diagnostic Plot for Austria')
 
-fprintf('Simple Regression - The best delay for Austria is %.0f days\n',i-1);
-fprintf('Simple Regression - The best model for Austria is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
+fprintf('The best delay for Austria is %.0f days\n',i-1);
+fprintf('The best model for Austria is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
-adjR2_simple(2) = adjR2(i);
+
 %% Belgium
 
 
@@ -87,12 +86,12 @@ scatter(y(:,i),rmse(:,i+1))
 hold on
 plot(xlim,-1.96*[1 1],'--c')
 plot(xlim,1.96*[1 1],'--c')
-title('Simple Regression - Diagnostic Plot for Belgium')
+title('Diagnostic Plot for Belgium')
 
-fprintf('Simple Regression - The best delay for Belgium is %.0f days\n',i-1);
-fprintf('Simple Regression - The best model for Belgium is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
+fprintf('The best delay for Belgium is %.0f days\n',i-1);
+fprintf('The best model for Belgium is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
-adjR2_simple(3) = adjR2(i);
+
 
 %% France
 
@@ -117,12 +116,11 @@ scatter(y(:,i),rmse(:,i+1))
 hold on
 plot(xlim,-1.96*[1 1],'--c')
 plot(xlim,1.96*[1 1],'--c')
-title('Simple Regression - Diagnostic Plot for France')
+title('Diagnostic Plot for France')
 
-fprintf('Simple Regression - The best delay for France is %.0f days\n',i-1);
-fprintf('Simple Regression - The best model for France is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
+fprintf('The best delay for France is %.0f days\n',i-1);
+fprintf('The best model for France is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
-adjR2_simple(4) = adjR2(i);
 
 %% Greece
 
@@ -147,12 +145,11 @@ scatter(y(:,i),rmse(:,i+1))
 hold on
 plot(xlim,-1.96*[1 1],'--c')
 plot(xlim,1.96*[1 1],'--c')
-title('Simple Regression - Diagnostic Plot for Greece')
+title('Diagnostic Plot for Greece')
 
-fprintf('Simple Regression - The best delay for Greece is %.0f days\n',i-1);
-fprintf('Simple Regression - The best model for Greece is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
+fprintf('The best delay for Greece is %.0f days\n',i-1);
+fprintf('The best model for Greece is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
-adjR2_simple(5) = adjR2(i);
 
 %% Ireland
 
@@ -177,19 +174,12 @@ scatter(y(:,i),rmse(:,i+1))
 hold on
 plot(xlim,-1.96*[1 1],'--c')
 plot(xlim,1.96*[1 1],'--c')
-title('Simple Regression - Diagnostic Plot for Ireland')
+title('Diagnostic Plot for Ireland')
 
-fprintf('Simple Regression - The best delay for Ireland is %.0f days\n',i-1);
-fprintf('Simple Regression - The best model for Ireland is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
+fprintf('The best delay for Ireland is %.0f days\n',i-1);
+fprintf('The best model for Ireland is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
-adjR2_simple(6) = adjR2(i);
 
 %We can observe that the results are in accordance with Executive 4! In
 %each country the best fitting model is the one with the exact number of
-%delays between deaths and cases as in Program 4. That makes a lot of sense
-%since as we saw, the Pearson's coefficient factor is related to the
-%linear regression. 
-%On the other hand Executive 5, same as 4 is not alligned with the resluts
-%presented in Executive 3. As we mentioned before, we can see that the two
-%waves progress with some relation, however, the day with the most
-%cases/deaths is not a reliable statistic factor.
+%delays between 

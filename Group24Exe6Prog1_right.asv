@@ -1,0 +1,15 @@
+%Efstathios Dimitriadis 8490
+%Emmanouil Mylonas 9508
+
+Group24Exe1Prog3
+
+Group24Exe5Prog1 %Simple Regression 
+
+%% UK
+name = 'UK';
+[model_UK, b_step_UK, b_full] = Group24Exe6Fun1(total_cases_uk,total_deaths_uk,50,210,name);
+
+
+%% Austria
+
+nam
