@@ -1,6 +1,7 @@
 %Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
-% Define second wave for each country
+%Define second wave for each country
+
 Group24Exe1Prog3
 
 %% United Kingdom
@@ -9,6 +10,8 @@ normalised_second_cases_uk = second_cases_uk/sum(second_cases_uk);
 
 second_deaths_uk = total_deaths_uk(272:348);
 normalised_second_deaths_uk = second_deaths_uk/sum(second_deaths_uk);
+start_second_uk = 240;
+end_second_uk = 348;
 
 %% Austria
 second_cases_au = total_cases_au(223:348);
@@ -16,6 +19,8 @@ normalised_second_cases_au = second_cases_au/sum(second_cases_au);
 
 second_deaths_au = total_deaths_au(277:348);
 normalised_second_deaths_au = second_deaths_au/sum(second_deaths_au);
+start_second_au = 223;
+end_second_au = 348;
 
 %% Belgium
 second_cases_be = total_cases_bel(250:347);
@@ -30,6 +35,8 @@ normalised_second_cases_de = second_cases_de/sum(second_cases_de);
 
 second_deaths_de = total_deaths_den(254:348);
 normalised_second_deaths_de = second_deaths_de/sum(second_deaths_de);
+start_second_be = 250;
+end_second_be = 347;
 
 %% France
 second_cases_fr = total_cases_fr(209:348);
@@ -37,6 +44,8 @@ normalised_second_cases_fr = second_cases_fr/sum(second_cases_fr);
 
 second_deaths_fr = total_deaths_fr(255:348);
 normalised_second_deaths_fr = second_deaths_fr/sum(second_deaths_fr);
+start_second_fr = 209;
+end_second_fr = 348;
 
 %% Germany
 second_cases_ge = total_cases_ge(222:348);
@@ -48,6 +57,8 @@ normalised_second_deaths_ge = second_deaths_ge/sum(second_deaths_ge);
 %% Greece
 second_cases_gr = total_cases_gr(200:346);
 normalised_second_cases_gr = second_cases_gr/sum(second_cases_gr);
+start_second_gr = 200;
+end_second_gr = 346;
 
 second_deaths_gr = total_deaths_gr(238:346);
 normalised_second_deaths_gr = second_deaths_gr/sum(second_deaths_gr);
@@ -86,3 +97,5 @@ normalised_normalised_cases_swit = second_cases_swit/sum(second_cases_swit);
 
 second_deaths_swit = total_deaths_swit(300:346);
 normalised_second_deaths_swit = second_deaths_swit/sum(second_deaths_swit);
+start_second_ir = 200;
+end_second_ir = 346;
