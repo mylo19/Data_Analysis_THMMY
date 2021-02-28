@@ -76,13 +76,13 @@ disp(adjR2_prediction)
 % model doesn't seem to fit well in the second wave, even with the use of
 % LASSO instead of the full 21-model that was used in Executive 7. The
 % answer for this is really simple. The first wave had a way bigger death
-% rate next to the second wave, since COVID-19 was a new deseace that
-% people could not deal yet. Since then the death rate has dropped
+% rate next to the second wave, since COVID-19 was a new disease that
+% people could not deal with yet. Since then the death rate has dropped
 % significantly, making the predictions for the deaths using the model
-% trained in the first wave useless. For example, if we plot the cases and
+% trained in the first wave is useless. For example, if we plot the cases and
 % the deaths in Ireland, we can easily understand that there is a huge
 % diversion among these, and hence we cannot take trustworthy results.
-% Ireland has the worst Adjuster R square from all of our countries, since
+% Ireland has the worst Adjusted R square from all of our countries, since
 % it has the biggest diversion.
 
 % If we wanted more reliable results, we could probably train the model in

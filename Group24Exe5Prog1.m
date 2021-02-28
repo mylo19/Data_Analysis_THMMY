@@ -18,7 +18,7 @@ for t=0:20
     n = length(deaths_sample);
     y(:,t+1) = cases_sample*b(:,t+1);
     adjR2(t+1) = 1 - (n-1)*sum((deaths_sample'-y(:,t+1)).^2)/((n-2)*sum((deaths_sample-mean(deaths_sample)).^2));
-    se2 = sum((deaths_sample'-y(:,t+1)).^2/(n-2));
+    se2 = sum((deaths_sample'-y(:,t+1)).^2)/(n-2);
     rmse(:,t+1) = (deaths_sample'-y(:,t+1))/sqrt(se2);
 end
 
@@ -183,6 +183,15 @@ fprintf('Simple Regression - The best delay for Ireland is %.0f days\n',i-1);
 fprintf('Simple Regression - The best model for Ireland is y = (%f) * x + (%f)\n',b(2,i),b(1,i))
 
 adjR2_simple(6) = adjR2(i);
+
+% By examing the adjusted R squared and the Diagnostic Plots we can observe
+% that out of the six Countries only two(UK and Belgium) have an efficient
+% simple linear regression model. For the rest we have either an average
+% fitting (France) or display inadequate results.
+% After examing the Diagnostic Plots in detail we notice that in Ireland
+% and France we encounter some outliers, for Austria a respectable portion 
+% of the samples lies out the bounds and for Greece it is clear that we 
+% have a different type of correlation.
 
 %We can observe that the results are in accordance with Executive 4! In
 %each country the best fitting model is the one with the exact number of

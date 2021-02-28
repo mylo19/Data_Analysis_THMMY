@@ -2,9 +2,10 @@
 %Emmanouil Mylonas 9508
 %Predict 2nd wave using models from assignment 6
 
-Group24Exe6Prog1_right
+Group24Exe6Prog1
 Group24Exe7Prog1
 close all
+clc
 
 %% UK
 name = 'UK';
@@ -35,3 +36,7 @@ Group24Exe7Fun1(model_Gr, total_cases_gr, total_deaths_gr, start_second_gr, end_
 name = 'Ireland';
 fprintf('The coefficient of determination for %s training dataset was %.4f\n',name, R_adj_Ir)
 Group24Exe7Fun1(model_Ir, total_cases_ir, total_deaths_ir, start_second_ir, end_second_ir, name);
+
+% We notice that the model is inadequate for the second wave and even
+% countries like Belgium which had a very high adjusted R square were in
+% fact overfitting to the training dataset.

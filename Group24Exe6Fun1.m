@@ -28,7 +28,7 @@ function [model, R_adj] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
     hold on
     plot(xlim,-1.96*[1 1],'--c')
     plot(xlim,1.96*[1 1],'--c')
-    title('Diagnostic plot - Stepwise Regression - UK');
+    title(strcat('Diagnostic plot - Stepwise Regression - ', name));
 
     %Full 21 Model
     regressionModel = fitlm(cases_sample,deaths_sample');
@@ -37,7 +37,7 @@ function [model, R_adj] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
 
     ypred = [ones(n,1) cases_sample]*b2;
     errors = deaths_sample' - ypred;
-    rms_full = sqrt( 1/(n-length(b2))*sum(errors).^2 );
+    rms_full = sqrt( 1/(n-length(b2))*sum(errors.^2) );
     rmse_full = errors/rms_full;
     adjR2_full = adjRsq(ypred,deaths_sample',n,length(b2));
 
@@ -46,8 +46,8 @@ function [model, R_adj] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
     hold on
     plot(xlim,-1.96*[1 1],'--c')
     plot(xlim,1.96*[1 1],'--c')
-    %This doesn't work, I dont know why there is a problem with title.
-    %title(sprintf('Diagnostic plot - Full Model - %s', name));
+
+    title(strcat('Diagnostic plot - Full Model - ', name));
 
     if adjR2_simple >= adjR2_step && adjR2_simple>= adjR2_full
         fprintf('The best model for %s is simple linear regression\n',name)

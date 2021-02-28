@@ -81,6 +81,10 @@ for k=1:2
     end
 end
     
-    
+% The distribution found for UK seems to fit well for most European
+% countries both for cases and deaths since the LSE is very small, except
+% for Russia which is expected since the distribution of cases/deaths there
+% is quite different than the rest of the countries, something that is 
+% discernible even from their plot.
     
     

@@ -105,7 +105,7 @@ end
 t_delay(6) = tt;
 r_pearson(6) = r;
 
-
+disp("The delay between cases and deaths for each country is (in days):");
 disp(t_delay)
 %This approach seams to prove that there is a delay between the cases and
 %the deaths. The array t_delay shows the delay t when we have the maximum

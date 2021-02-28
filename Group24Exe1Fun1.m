@@ -56,6 +56,7 @@ function [distribution] = Group24Exe1Fun1(normalised_cases_uk)
         case diff3
             distribution = 'poisson';
         case diff4 
+            disp(minimum);
             distribution = 'rayleigh';
         case diff5
             distribution = 'lognormal';
