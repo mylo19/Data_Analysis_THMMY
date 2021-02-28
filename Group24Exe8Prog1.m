@@ -1,5 +1,6 @@
 %%Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
+%For this Executive we use the LASSO model, implemented in Group24Exe8Fun1.
 
 Group24Exe1Prog3 %1st wave definition
 Group24Exe7Prog1 %2nd wave definition

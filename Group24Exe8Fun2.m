@@ -1,3 +1,9 @@
+%Efstathios Dimitriadis 8490
+%Emmanouil Mylonas 9508
+%Prediction model for the second wave.Using as inputs the results from the
+%training model, we compute and return the adjusted R square to test whether
+%this prediction model works.
+
 function [adjR2] = Group24Exe8Fun2(total_cases,total_deaths,start_date,end_date, b,k)
     
 deaths_sample = total_deaths(start_date:end_date)/sum(start_date:end_date);

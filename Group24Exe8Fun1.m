@@ -1,6 +1,8 @@
 %Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
-%PCR using SVD algorithm.
+%LASSO model. The outputs of this function are the b Coefficients, the
+%number of dimensions we now have and the adjR2. All of them will be used
+%either in the prediction model, or to compare the two.
 
 function [bLASSO, k, adjR2] = Group24Exe8Fun1(total_cases,total_deaths,start_date,end_date)
     deaths_sample = total_deaths(start_date:end_date)/sum(total_deaths(start_date:end_date));
