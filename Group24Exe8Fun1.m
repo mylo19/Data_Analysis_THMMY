@@ -11,7 +11,10 @@ function [bPCR] = Group24Exe8Fun1(total_cases,total_deaths,start_date,end_date)
         cases_sample(:,t+1) = cases_sample(:,t+1)/sum(cases_sample(:,t+1));
     end
     
-    % PCR
+    % Lasso 
+    B = lasso(cases_sample, deaths_sample);
+    disp(B(:,50))
+
     mC = mean(cases_sample);
     mD = mean(deaths_sample);
     cases_sample_centered = cases_sample - repmat(mC,n,1);
