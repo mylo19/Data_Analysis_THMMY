@@ -8,7 +8,13 @@ function adjR2 = Group24Exe7Fun1(model, total_cases, total_deaths, start_cases, 
 
     % To deal with the different domains between the first and second waves
     % for some countries we normalise the datasets for cases and deaths
-    % like we did for the first wave.
+    % like we did for the first wave. 
+    % This is a must for COVID datasets because for almost all
+    % countries the cases skyrocket during the second wave while the deaths
+    % do not register such a drastic increase, or they even decrease for
+    % some countries. There are also countries like Ireland where the cases
+    % didn't register a big increase but the deaths decreased to 
+    % 1/6th-1/10th compared to the first wave.
     deaths_sample = total_deaths(start_cases:end_cases)/sum(total_deaths(start_cases:end_cases));
     n = length(deaths_sample);
     cases_sample = zeros(n,21);
