@@ -28,6 +28,6 @@ function adjR2 = Group24Exe7Fun1(model, total_cases, total_deaths, start_cases, 
     b = b(:,1);
     adjR2 = adjRsq(Ypred,deaths_sample',n,length(b));
     
-    fprintf('The coefficient of determination for %s is %.4f\n',name, adjR2)
+    fprintf('The coefficient of determination for %s validation dataset is %.4f\n',name, adjR2)
 end
 

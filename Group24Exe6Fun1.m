@@ -1,7 +1,7 @@
 %Efstathios Dimitriadis 8490
 %Emmanouil Mylonas 9508
 
-function [model, b, b2] = Group24Exe6Fun1(total_cases, total_deaths, start_cases, end_cases, adjR2_simple,name)
+function [model, R_adj] = Group24Exe6Fun1(total_cases, total_deaths, start_cases, end_cases, adjR2_simple,name)
    
     adjRsq = @(ypred,y,n,k) ( 1 - (n-1)/(n-1-k)*sum((ypred-y).^2)/sum((y-mean(y)).^2) );
     deaths_sample = total_deaths(start_cases:end_cases)/sum(total_deaths(start_cases:end_cases));
@@ -51,10 +51,13 @@ function [model, b, b2] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
 
     if adjR2_simple >= adjR2_step && adjR2_simple>= adjR2_full
         fprintf('The best model for %s is simple linear regression\n',name)
+        R_adj = adjR2_simple;
     elseif adjR2_step> adjR2_simple && adjR2_step >= adjR2_full
-        fpritf('The best model for %s is Stepwise Regression, with .0%f variables\n',name, length(b))
+        fprintf('The best model for %s is Stepwise Regression, with .0%f variables\n',name, length(b))
+        R_adj = adjR2_step;
     else
         fprintf('The best model for %s is the full 21-variables model\n',name)
         model = regressionModel;
+        R_adj = adjR2_full;
     end
 end
