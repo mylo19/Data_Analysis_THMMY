@@ -55,5 +55,6 @@ function [model, b, b2] = Group24Exe6Fun1(total_cases, total_deaths, start_cases
         fpritf('The best model for %s is Stepwise Regression, with .0%f variables\n',name, length(b))
     else
         fprintf('The best model for %s is the full 21-variables model\n',name)
+        model = regressionModel;
     end
 end
